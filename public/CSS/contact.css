@@ -1,0 +1,116 @@
+*{
+    box-sizing: border-box;
+}
+
+.bck-img {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: -2;
+    width:100%;
+    filter: blur(8px);
+  }
+
+li{
+    text-decoration: none;
+}
+.text h4 {
+    color: #330531;
+    padding: 3rem;
+    margin: 0 12% 0 12%;
+    font-size: large;
+    text-align: center;
+    
+}
+
+.contact h4{
+        color: #250333;
+        margin: 0 23% 0 23%;
+}
+
+.first-line{
+    align-items: center;
+}
+
+h2{
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    color: aliceblue;
+
+}
+
+.heading{
+    color: #420b4d;
+}
+
+.sub-heading{
+    color: #fff;
+}
+
+#contact{
+    display: block;
+    text-align: center;
+}
+
+.contact-subscribe {
+    margin: 0 20% 0 20%;
+}
+
+
+.contact-ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 0;
+    color: aliceblue;
+    font-size: larger;
+}
+
+.contact-item{
+    text-decoration: none;
+    width: 33%;
+}
+
+.contact-item ::marker{
+    text-decoration: none;
+}
+
+.mail-box{
+    display:block;
+    margin-bottom: 20px;
+}
+
+#email {
+    width: 50%;
+    padding: 15px 25px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid rgb(78, 14, 75);
+    border-radius: 6px;
+  }
+
+  button {
+    padding: 15px 25px;
+    color: #fff;
+    background-color: #650b68;
+    border-radius: 100px;
+    box-shadow: 0 5px rgb(201, 178, 197);
+  }
+  
+button:hover {background-color: #a3199c}
+
+.contact-item{
+    width: 25%;
+    justify-content: space-between;
+}
+
+.contact-details{
+    background: #9c4c96;
+    text-align: center;
+    opacity: 70%;
+    padding: 0.3rem;
+    margin: 0.5rem 0;
+    box-shadow: 0 8px 16px 0 rgba(128, 120, 120, 0.2), 0 6px 20px 0 rgba(212, 205, 205, 0.19);
+}

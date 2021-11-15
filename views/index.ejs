@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include('./head_index'); %>
+</head>
+
+<body>
+    <header class="main-header">
+        <head>
+            <link rel="stylesheet" href="./CSS/login.css">
+        </head>
+        <div>
+            <button class="toggle-button">
+                <span class="toggle-button__bar"></span>
+            </button>
+            <a href="/" class="main-header__brand">
+                <img src="./images/icon.jpg" alt="balloon asylum">
+            </a>
+        </div>
+        <h3> THE BALLOONATIC ASYLUM </h3>
+        <nav class="main-nav">
+            <div class="main-nav__items">
+                <div class="main-nav__item">
+                    <a href="/product">Products</a>
+                </div>
+                <div class="main-nav__item">
+                    <a href="/about">About</a>
+                </div>
+                <div class="main-nav__item">
+                    <a href="/contact">Contact Us</a>
+                </div>
+                <% if (isloggedIn) { %>
+                <div>
+                    <button onclick=window.location.href="/login" style="width:auto;">Login</button>
+                </div>
+                <div>
+                    <button onclick=window.location.href="/signup" style="width:auto;">Sign Up</button>
+                </div>
+                <%} else {%>
+                    <p style="color:#afeff1";>
+                        logged in successfully
+                    </p>
+                    <div>
+                        <button onclick=window.location.href="/logout" style="width:auto;">LogOut</button>
+                    </div>
+                <% } %>
+            </div>
+        </nav>
+    </header>
+    <main class="home-page">
+        <nav class="menu-nav">
+            <div class="menu-nav__items">
+                <div class="menu-nav__item">
+                    <a href="/product">Birthday Bouquets</a>
+                </div>
+                <div class="menu-nav__item">
+                    <a href="/product">Balloony Occasions</a>
+                </div>
+                <div class="menu-nav__item">
+                    <a href="/product">Build a Balloon Bouquet</a>
+                </div>
+                <div class="menu-nav__item">
+                    <a href="/product">Decorating with the Balloons</a>
+                </div>
+                <div class="menu-nav__item">
+                    <a href="/product">Balloon in Bulk</a>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Content for homepage -->
+        <section class="hero">
+            <h1>
+                NOBODY CAN BE UNCHEERED WITH A BALLOON!
+            </h1>
+        </section>
+        <section class="wrapper">
+            <article class="content content-structure">
+              <div>
+                <img src="./images/customer1.jpg" alt="cutomer-1" class="content-img">
+              </div>
+              <p class="content-p">
+                Style up your party decoration with birthday balloon including number-shaped mylar balloons, self-inflating nautical balloons, neon latex balloon
+                Add cheer to any birthday celebration with our selection of foil and latex birthday balloons in a variety of fun shapes and patterns.  
+              </p>  
+            </article>
+            <article class="content1 content-structure">
+                <div >
+                    <img src="./images/customer3.jpg" alt="cutomer-1" class="content-img">
+                </div>
+                <p class="content-p">
+                    Spruce Up Your Day Or Event With Our Wide Variety Of Colorful Event Balloons.
+                    Premium High Quality Balloons With Affordable Wholesale Pricing.
+                    Choose from birthday balloons for kids and adults, seasonal, special occasion or special message balloons, plain colour balloons perfect for any event.
+                </p>
+            </article>
+            <aside class="side">
+                <nav class="review-nav">
+                    <ul>
+                      <li class="review-heading"> <h4>REVIEWS</h4></li>
+                      <li>-My balloons were an absolute hit and went along perfectly with the other decorations I purchased.</li></br></br>
+                      <li>-They stayed infalted more than enough time and the price was right.</li></br></br>
+                      <li>-Overall I loved this product!! </li></br></br>
+                    </ul>
+                  </nav>
+            </aside>
+        </section>
+    </main>
+    <footer>
+        <%- include('./footer'); %>
+    </footer>
+</body>
+</html>

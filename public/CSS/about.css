@@ -1,0 +1,61 @@
+html{
+    box-sizing: border-box;
+  }
+  
+  body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+
+  .details{
+    margin:0 18% 0 18%;
+    padding-top: 20px;
+  }
+
+  .about-structure{
+    background-color: #e0d866;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 2px rgb(0 0 0 / 50%);
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  .owner-intro{
+    display: flex;
+    align-items: center;
+    margin-top: 13px;
+    margin-bottom: 13px;
+  }
+
+  .owner-details{
+   display: inline-block;
+   vertical-align: middle;
+   margin:0px;
+  }
+  
+  .owner-details p{
+    justify-content: center;
+    width: 20%;
+  }
+  
+  .about-img img {
+    vertical-align: middle;
+    height: 12rem;
+    width: 10rem;  
+    padding: 10px;
+  }
+
+
+.about-company{
+  color: black;
+  text-align: justify;
+  font-size: medium;
+}
+
+.about-company-paragraph{
+  text-align: justify;
+}
+  
+  
+  

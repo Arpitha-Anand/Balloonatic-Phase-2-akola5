@@ -1,0 +1,110 @@
+
+  .content {
+    grid-area: content;
+  }
+
+  .content1 {
+    grid-area: content1;
+  }
+
+  .side {
+    grid-area: sidebar;
+  }
+
+
+  .wrapper {
+    margin: 3rem 5% 0 5%;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 4fr 1fr;
+    grid-template-areas:
+      "content sidebar"
+      "content1 sidebar"
+    }
+
+   nav ul {
+     flex-direction: column;
+     text-align: center;
+     list-style-type: none;
+   }
+
+.hero{
+    background-image: url(../images/eye.jpg);
+    width:100%;
+    position:relative;
+    height: 250px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    top: 30px;
+    
+}
+
+.hero h1 {
+    color: white;
+    font-family: "Anton", sans-serif;
+    position: absolute;
+    bottom: 5%;
+    left: 3%;
+    font-size:1.6rem;
+}
+
+.content-structure{
+    display: flex;
+    align-items: center;
+    background-color: #beb0bb;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 2px rgb(0 0 0 / 50%);
+}
+
+
+.content-img{
+    height: 15rem;
+    width: 17rem;
+    padding-left: 10rem;
+    box-shadow: 0px 0px 0px 0px rgb(0 0 0 / 30%);
+}
+
+.content-p{
+    margin-left: 1rem;
+    text-align: justify;
+    max-width:35%;
+}
+
+.side{
+  display: flex;
+  vertical-align: center;
+}
+
+.side p{
+   padding-right: 5px;
+}
+
+.review-nav{
+    background-color: #d497c7;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 2px rgb(0 0 0 / 50%);
+}
+
+.review-nav ul{
+  padding: 0.8rem;
+  box-shadow: 0px 0px 0px 0px rgb(0 0 0 / 30%);
+}
+
+.review-nav li{
+  overflow: hidden;
+  display: flex;
+  vertical-align: center;
+  font-size: 1em;
+  line-height: 1.462em;
+  max-height: 2.924em;
+  display: inline-block;
+  width: 100%;
+}
+
+.review-heading{
+  padding: 0;
+  font-family: sans-serif;
+  color: white;
+  font-weight: bold;
+}

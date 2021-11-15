@@ -1,0 +1,132 @@
+html{
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.main-header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  bottom: 0 0.5rem;
+  left: 0;
+  background: #551b47;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.toggle-button {
+    width: 3rem;
+    background: transparent;
+    border: none;
+    padding-top: 0;
+    padding-bottom: 0;
+    vertical-align: middle;
+  }
+  
+  .main-header__brand img {
+    height: 4.5rem;
+    width: 7rem;
+    vertical-align: middle;
+  }
+  
+  h3 {
+    padding: 0 0.1rem;
+    display: flex;  
+    vertical-align: center;
+    color:azure;
+    font-weight: bolder;
+    font-size: xx-large;
+    align-items:center;
+  }
+
+  .main-nav__items {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .main-nav__item {
+    margin: 1rem 1rem;
+    color: white;
+    align-items:inherit;
+    background:#d497c7;
+    padding: 0.5rem 0.7rem;
+    margin-bottom: 2.5rem;
+    border-radius: 8px;
+  }
+
+  .main-nav__item a {
+  text-decoration: none;
+  color: #14331d;
+  font-weight: bold;
+  vertical-align:middle;
+}
+
+.main-nav__item a:hover,
+.main-nav__item a:active {
+  color: white;
+  border-bottom: 5px solid white;
+}
+
+.menu-nav__items {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .menu-nav__item {
+    margin: 0 1rem;
+    color: white;
+    background:#804773;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    justify-content: space-between;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 8px 23px 0 rgba(0,0,0,0.19);
+  }
+
+  .menu-nav__item a {
+  text-decoration: none;
+  color: #f5fdf7;
+  font-weight: bold;
+}
+
+.menu-nav__item a:hover,
+.menu-nav__item a:active {
+  color: white;
+  border-bottom: 5px solid white;
+}
+
+main{
+  margin-top: 7rem;
+  width: 100%;
+  padding-bottom: 6rem;
+}
+
+footer{
+  width: 150%;
+  position: absolute;
+  bottom: -50%;
+  background: #551b47;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-img img{
+  height: 3rem;
+  width: 5rem;
+}
+
+footer h5 {
+   color:azure;
+   font-weight: 500;
+}

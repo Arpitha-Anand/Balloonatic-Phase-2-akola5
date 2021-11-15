@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./head_product'); %>
+</head>
+
+<body>
+    <header class="main-header">
+        <%- include('./header'); %>
+    </header>
+    <main>
+        <img class="bck-img" src="./images/product1.jpg">
+        <nav class="menu-nav">
+            <div class="menu-nav__items">
+                <div class="menu-nav__item">
+                    <a href="/product">Birthday Bouquets</a>
+                </div>
+                <div class="menu-nav__item">
+                    <a href="/product">Balloony Occasions</a>
+                </div>
+                <div class="menu-nav__item">
+                    <a href="/product">Build a Balloon Bouquet</a>
+                </div>
+                <div class="menu-nav__item">
+                    <a href="/product">Decorating with the Balloons</a>
+                </div>
+                <div class="menu-nav__item">
+                    <a href="/product">Balloon in Bulk</a>
+                </div>
+            </div>
+        </nav>
+        <h4>WHAT'S TRENDING AT BALLOONATIC ASYLUM</h4>
+        <section class="wrapper">
+            <div class="main-content">
+                <% productList.forEach(function(product) { %>
+                    <article class="content content-structure">
+                        <div>
+                            <img src=<%= product.img %> alt="cutomer-1" class="content-img">
+                        </div>
+                        <br/>
+                        <p><%= product.title %><br/></p>
+                        <p><%= product.price %></p>
+                        <p><%= product.description %></p><br/>
+                        <div>
+                            <button class="button" onclick="location.href='/'"> BUY </button>
+                        </div>
+                <% }); %>
+            </div>    
+        </section>
+    </main>
+    <footer>
+        <%- include('./footer'); %>
+    </footer>
+
+</body>
+
+</html>
