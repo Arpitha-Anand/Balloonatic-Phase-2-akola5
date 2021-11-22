@@ -8,6 +8,14 @@ const express = require("express"),
   userController = require("./controllers/userController"), 
   layouts = require("express-ejs-layouts");
 
+const session = require("express-session");
+app.use(
+  session({
+    secret:"key that will sign cookie",
+    resave: false,
+    saveUninitialized: false,
+  })
+)
 const mongoose = require("mongoose");
 mongoose.connect("mongodb+srv://m001-Arpitha:Ka02mg&9708@capstone.gxw2o.mongodb.net/myFirstDatabase?retryWrites=true&w=majority", {
     useNewUrlParser: true,
@@ -41,7 +49,7 @@ app.get("/login", (req, res) => {
   res.render("login");
 });
 app.post("/login",userController.login)
-app.post("/logout",userController.logout)
+app.get("/logout", userController.logout)
 app.get("/signup", (req,res) => {
   res.render("signup");
 })
