@@ -45,9 +45,7 @@ app.get("/contact", (req, res) => {
   res.render("contact");
 });
 
-app.get("/login", (req, res) => {
-  res.render("login");
-});
+app.get("/login", userController.login);
 app.post("/login",userController.login)
 app.get("/logout", userController.logout)
 app.get("/signup", (req,res) => {

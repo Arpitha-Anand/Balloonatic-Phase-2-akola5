@@ -8,8 +8,9 @@ let users = [{
 }];
 
 let usingMockDB = true;
-let isloggedIn = false;
+let isloggedIn = true;
 let sessioId = "";
+let message = "";
 
 function authenticate(id, pwd){
     let authenticate = false;
@@ -29,19 +30,31 @@ function authenticate(id, pwd){
 
 exports.login = (req, res) => {
     let user = req.body;
+    if(req.body.email && req.body.password){
     user = authenticate(req.body.email,req.body.password);
 
+
     console.log(req.session.id);
-    isloggedIn = user?isloggedIn:!isloggedIn;
+    isloggedIn = user?!isloggedIn:isloggedIn;
+    if(user){
     sessioId = !isloggedIn?req.session.id:"";
     console.log("Session Id "+ sessioId);
     console.log("logged in user is "+ user.email)
-    res.render("index",
-      {isloggedIn});
+    res.header("isloggedIn",isloggedIn)
+    res.redirect("/")
+    // res.render("index",
+    //   {isloggedIn});
+    }else{
+      message="Invalid Username/Password."
+      console.log(message)
+      res.render("login",{message})
+    }
+  }else{
+    res.render("login",{message})
+  }
   };
 
 exports.intialize = (req,res) => {
-  let isloggedIn = true;
   res.render("index", {isloggedIn});
 }
 
